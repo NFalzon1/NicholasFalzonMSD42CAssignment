@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5764289973141982844}
   - component: {fileID: 1951409673450873297}
+  - component: {fileID: -7087834699977374786}
   m_Layer: 0
   m_Name: Gas Cylinder
   m_TagString: Untagged
@@ -82,3 +83,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-7087834699977374786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6335851739379972289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14488da81eaa0b2459c3ef0193ba9a3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 4027470063395688293, guid: 13941e77dd0eedc4f814cb1e13180d4d, type: 3}
+  - {fileID: 4619825704432534831, guid: 65db6cb7baaa7964b9d1a8fe80adbb3a, type: 3}
+  - {fileID: 8923283855504080693, guid: f4c4fe54e1600ab42b02138d9c9ef663, type: 3}
