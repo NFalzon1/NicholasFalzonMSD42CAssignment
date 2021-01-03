@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7620168054774232381}
   - component: {fileID: 4073330966728301834}
+  - component: {fileID: 8261497471154339672}
   m_Layer: 0
   m_Name: Stone
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1475973128907477453}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -82,3 +83,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8261497471154339672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475973128907477453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14488da81eaa0b2459c3ef0193ba9a3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 9065296576104438339, guid: 47903ff823050f743bb2d62f688102ab, type: 3}
+  - {fileID: 1418039782457066952, guid: 8568d3445d7b4b94398b1b5d7e8897b2, type: 3}
+  - {fileID: 5854667469458549243, guid: d8939ac75dffef047ad532de22df8636, type: 3}
+  waveConfig: {fileID: 11400000, guid: 2b1a1090b4f12fe4d8857db20a7a5cf0, type: 2}

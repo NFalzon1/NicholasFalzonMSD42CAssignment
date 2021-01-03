@@ -6,7 +6,9 @@ public class EnemyPathing : MonoBehaviour
 {
 
     [SerializeField] List<Transform> waypoints;
-    [SerializeField] float enemyMoveSpeed = 2f;
+
+
+    [SerializeField] WaveConfig waveConfig;
 
     //saves the waypoint in which we want to go
     int waypointIndex = 0;
@@ -14,7 +16,10 @@ public class EnemyPathing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //set the start position of Enemy to the 1st waypoint position
+        //get the list waypoints from waveConfig
+        waypoints = waveConfig.GetWaypoints();
+
+        //set the start point to waypoint 0
         transform.position = waypoints[waypointIndex].transform.position;
     }
 
@@ -26,19 +31,20 @@ public class EnemyPathing : MonoBehaviour
 
     private void EnemyMove()
     {
-        if (waypointIndex <=waypoints.Count -1)
+        if (waypointIndex <= waypoints.Count - 1)
         {
-            //set the targetPosition to the waypoint where we want to go
+            //set the target position to the waypoints where we want to go
             var targetPosition = waypoints[waypointIndex].transform.position;
-            //make sure that z axis = 0
+
+            //to make sure that the x-axis is always 0
             targetPosition.z = 0f;
 
-            var enemyMovement = enemyMoveSpeed * Time.deltaTime;
+            var enemyMovement = waveConfig.GetEnemyMoveSpeed() * Time.deltaTime;
 
-            //move Enemy from current position to targetPosition, at enemyMovement speed
+            //Move Enemy from current position to target position, at enemy movement speed
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, enemyMovement);
 
-            //if enemy reaches the last waypoint
+            //if enemy reach the last waypoint
             if (transform.position == targetPosition)
             {
                 waypointIndex++;
@@ -51,5 +57,11 @@ public class EnemyPathing : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    //set up a WaveConfig
+    public void SetWaveConfig(WaveConfig waveConfigToSet)
+    {
+        waveConfig = waveConfigToSet;
     }
 }

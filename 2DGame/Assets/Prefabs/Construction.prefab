@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 803423375177318654}
   - component: {fileID: 3511785442060130791}
+  - component: {fileID: 7039004385008184384}
   m_Layer: 0
   m_Name: Construction
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1470048599736356245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -82,3 +83,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7039004385008184384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470048599736356245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14488da81eaa0b2459c3ef0193ba9a3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 8664658020352934664, guid: 6fa8da8be18f2214db77049b4bd4fe04, type: 3}
+  - {fileID: 1330021182669164330, guid: 45ca4e6ab718b3047b79322c1329bbd2, type: 3}
+  - {fileID: 3152479626321533399, guid: 3789b946a18c77648a3521be27554b5b, type: 3}
+  enemyMoveSpeed: 2
+  waveConfig: {fileID: 11400000, guid: a770931b68d7f9645ac7973487df098d, type: 2}

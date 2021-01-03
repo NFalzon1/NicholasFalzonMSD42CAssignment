@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 6335851739379972289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
-  - {fileID: 4027470063395688293, guid: 13941e77dd0eedc4f814cb1e13180d4d, type: 3}
-  - {fileID: 4619825704432534831, guid: 65db6cb7baaa7964b9d1a8fe80adbb3a, type: 3}
-  - {fileID: 8923283855504080693, guid: f4c4fe54e1600ab42b02138d9c9ef663, type: 3}
+  - {fileID: 3912881142823223854, guid: 3437a584995d5d84a88ded49c67694b3, type: 3}
+  - {fileID: 5468488965651714650, guid: e5331b34c681e134aa2923d867ad537b, type: 3}
+  - {fileID: 4542359216477535689, guid: 6a11e13ce9dae1147980b76da0be8378, type: 3}
+  waveConfig: {fileID: 11400000, guid: 9cd18b086e64b49439c722130126e2a1, type: 2}
