@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 803423375177318654}
   - component: {fileID: 3511785442060130791}
   - component: {fileID: 7039004385008184384}
+  - component: {fileID: -3480577030306674616}
+  - component: {fileID: -1776877502151447394}
+  - component: {fileID: -802414907202263969}
   m_Layer: 0
   m_Name: Construction
   m_TagString: Untagged
@@ -99,5 +102,54 @@ MonoBehaviour:
   - {fileID: 8664658020352934664, guid: 6fa8da8be18f2214db77049b4bd4fe04, type: 3}
   - {fileID: 1330021182669164330, guid: 45ca4e6ab718b3047b79322c1329bbd2, type: 3}
   - {fileID: 3152479626321533399, guid: 3789b946a18c77648a3521be27554b5b, type: 3}
-  enemyMoveSpeed: 2
   waveConfig: {fileID: 11400000, guid: a770931b68d7f9645ac7973487df098d, type: 2}
+--- !u!114 &-3480577030306674616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470048599736356245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e65c6cb86f6ecc428c8f7c437bb77bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+--- !u!70 &-1776877502151447394
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470048599736356245}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 4.94, y: 5.05}
+  m_Direction: 0
+--- !u!50 &-802414907202263969
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470048599736356245}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

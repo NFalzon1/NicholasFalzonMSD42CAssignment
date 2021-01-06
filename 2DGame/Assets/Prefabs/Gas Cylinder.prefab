@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 5764289973141982844}
   - component: {fileID: 1951409673450873297}
   - component: {fileID: -7087834699977374786}
+  - component: {fileID: -3184641085507157461}
+  - component: {fileID: 4672655459654793162}
+  - component: {fileID: 3619718670173959102}
   m_Layer: 0
   m_Name: Gas Cylinder
   m_TagString: Untagged
@@ -100,3 +103,53 @@ MonoBehaviour:
   - {fileID: 5468488965651714650, guid: e5331b34c681e134aa2923d867ad537b, type: 3}
   - {fileID: 4542359216477535689, guid: 6a11e13ce9dae1147980b76da0be8378, type: 3}
   waveConfig: {fileID: 11400000, guid: 9cd18b086e64b49439c722130126e2a1, type: 2}
+--- !u!114 &-3184641085507157461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6335851739379972289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e65c6cb86f6ecc428c8f7c437bb77bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+--- !u!70 &4672655459654793162
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6335851739379972289}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2.6, y: 3.6}
+  m_Direction: 0
+--- !u!50 &3619718670173959102
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6335851739379972289}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

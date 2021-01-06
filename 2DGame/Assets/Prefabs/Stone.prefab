@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 7620168054774232381}
   - component: {fileID: 4073330966728301834}
   - component: {fileID: 8261497471154339672}
+  - component: {fileID: 5812558903490511222}
+  - component: {fileID: -6784743731851965937}
+  - component: {fileID: 2220780054137424121}
   m_Layer: 0
   m_Name: Stone
   m_TagString: Untagged
@@ -100,3 +103,53 @@ MonoBehaviour:
   - {fileID: 1418039782457066952, guid: 8568d3445d7b4b94398b1b5d7e8897b2, type: 3}
   - {fileID: 5854667469458549243, guid: d8939ac75dffef047ad532de22df8636, type: 3}
   waveConfig: {fileID: 11400000, guid: 2b1a1090b4f12fe4d8857db20a7a5cf0, type: 2}
+--- !u!114 &5812558903490511222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475973128907477453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e65c6cb86f6ecc428c8f7c437bb77bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+--- !u!70 &-6784743731851965937
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475973128907477453}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 6.4999995, y: 3.8399997}
+  m_Direction: 0
+--- !u!50 &2220780054137424121
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475973128907477453}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3314313214680253431}
   - component: {fileID: 1287461286537549075}
-  m_Layer: 0
+  - component: {fileID: 525586379552966612}
+  - component: {fileID: -7233955079839770487}
+  m_Layer: 8
   m_Name: Player Car Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,3 +84,85 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &525586379552966612
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4369829447990504789}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.2, y: 4.8}
+    newSize: {x: 5.2, y: 4.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.95, y: -1.9699999}
+      - {x: 1.04, y: -1.86}
+      - {x: 1.11, y: -1.37}
+      - {x: 1.09, y: -0.90999997}
+      - {x: 1.09, y: -0.65}
+      - {x: 1.05, y: -0.63}
+      - {x: 1.04, y: 0.03}
+      - {x: 1.18, y: 0.04}
+      - {x: 1.1899999, y: 0.06}
+      - {x: 1.1899999, y: 0.21}
+      - {x: 1.05, y: 0.32}
+      - {x: 1.05, y: 0.85999995}
+      - {x: 1.09, y: 0.89}
+      - {x: 1.1, y: 1.48}
+      - {x: 1.01, y: 1.74}
+      - {x: 0.95, y: 1.8399999}
+      - {x: 0.74, y: 2.03}
+      - {x: 0.41, y: 2.1499999}
+      - {x: 0.29, y: 2.1599998}
+      - {x: -0.25, y: 2.1599998}
+      - {x: -0.37, y: 2.1399999}
+      - {x: -0.72999996, y: 2.03}
+      - {x: -0.96, y: 1.8399999}
+      - {x: -1.04, y: 1.65}
+      - {x: -1.1, y: 1.38}
+      - {x: -1.09, y: 0.79999995}
+      - {x: -1.04, y: 0.77}
+      - {x: -1.04, y: 0.31}
+      - {x: -1.18, y: 0.19999999}
+      - {x: -1.18, y: 0.06}
+      - {x: -1.06, y: 0.02}
+      - {x: -1.06, y: -0.59}
+      - {x: -1.1, y: -0.63}
+      - {x: -1.1, y: -1.41}
+      - {x: -1.06, y: -1.8499999}
+      - {x: -1.01, y: -1.9399999}
+      - {x: -0.84999996, y: -2.06}
+      - {x: -0.53, y: -2.1699998}
+      - {x: 0.26, y: -2.1699998}
+      - {x: 0.39999998, y: -2.1399999}
+      - {x: 0.65, y: -2.09}
+      - {x: 0.84999996, y: -2.03}
+--- !u!114 &-7233955079839770487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4369829447990504789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e81228d840114448198325f94485e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  moveSpeed: 10
+  padding: 0.7

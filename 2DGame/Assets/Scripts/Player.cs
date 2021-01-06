@@ -5,9 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    float test = 5f;
-
+    [SerializeField] float health = 100f;
     [SerializeField] float moveSpeed = 10f;
+    [SerializeField] float padding = 0.7f;
 
     float xMin, xMax;
 
@@ -30,8 +30,8 @@ public class Player : MonoBehaviour
         Camera gameCamera = Camera.main;
 
         //xMin = 0 xMax = 1
-        xMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
-        xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
+        xMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + padding;
+        xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - padding;
     }
 
     //moves the Player car
@@ -48,5 +48,30 @@ public class Player : MonoBehaviour
         //move the car to the newXPos
         this.transform.position = new Vector2(newXPos, transform.position.y);
 
+    }
+
+    //Damage Dealer part starts here
+
+    private void OnTriggerEnter2D(Collider2D bullet)
+    {
+        DamageDealer DmgDeal = bullet.gameObject.GetComponent<DamageDealer>();
+
+        if (!DmgDeal)
+        {
+            return;
+        }
+
+        ProcessHit(DmgDeal);
+
+    }
+
+    private void ProcessHit(DamageDealer dmgDeal)
+    {
+        health -= dmgDeal.GetDamage();
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
