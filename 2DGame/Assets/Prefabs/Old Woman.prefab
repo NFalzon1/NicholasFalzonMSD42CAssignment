@@ -120,7 +120,7 @@ MonoBehaviour:
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
   enemyLaserPrefab: {fileID: 3325153849355851513, guid: 8c72b97e56a94cd46887997df6f3c162, type: 3}
-  enemyLaserSpeed: 5
+  enemyLaserSpeed: 9
 --- !u!60 &-8782256524279580894
 PolygonCollider2D:
   m_ObjectHideFlags: 0
