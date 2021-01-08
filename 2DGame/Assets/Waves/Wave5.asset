@@ -17,4 +17,4 @@ MonoBehaviour:
   timeBetweenSpawns: 0.5
   spawnRandomFactor: 0.3
   numberOfEnemies: 10
-  enemyMoveSpeed: 2
+  enemyMoveSpeed: 16

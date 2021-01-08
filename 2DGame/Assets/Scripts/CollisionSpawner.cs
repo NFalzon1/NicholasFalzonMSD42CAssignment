@@ -29,10 +29,10 @@ public class CollisionSpawner : MonoBehaviour
     }
 
     //when calling Coroutine, specify which Wave we need to spawn enemies from
-    private IEnumerator SpawnAllEnemiesInWave(WaveConfig waveToSpawn)
+    private IEnumerator SpawnAllCollisionsInWave(WaveConfig waveToSpawn)
     {
         //loop for spawn all enemies in wave
-        for(int enemyCount = 1; enemyCount <=waveToSpawn.GetNumberOfEnemies(); enemyCount++)
+        for(int collisionCount = 1; collisionCount <=waveToSpawn.GetNumberOfEnemies(); collisionCount++)
         {
             //spawn the enemy from waveConfig at the position specified by waveConfig waypoints
             var newEnemy = Instantiate(
@@ -55,7 +55,7 @@ public class CollisionSpawner : MonoBehaviour
         foreach(WaveConfig currentWave in waveConfigList)
         {
             //wait for all enemies to spawn before going to the next wave
-            yield return StartCoroutine(SpawnAllEnemiesInWave(currentWave));
+            yield return StartCoroutine(SpawnAllCollisionsInWave(currentWave));
         }
     }
 }

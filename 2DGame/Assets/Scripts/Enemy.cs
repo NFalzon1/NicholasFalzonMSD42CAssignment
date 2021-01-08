@@ -35,12 +35,12 @@ public class Enemy : MonoBehaviour
 
         if(shotCounter <= 0f)
         {
-            EnemyFire();
+            CollisionFire();
             shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
         }
     }
 
-    private void EnemyFire()
+    private void CollisionFire()
     {
         GameObject enemyLaser = Instantiate(enemyLaserPrefab, transform.position, Quaternion.identity) as GameObject;
 

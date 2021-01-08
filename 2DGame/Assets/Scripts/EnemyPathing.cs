@@ -26,10 +26,10 @@ public class EnemyPathing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        EnemyMove();
+        CollisionMove();
     }
 
-    private void EnemyMove()
+    private void CollisionMove()
     {
         if (waypointIndex <= waypoints.Count - 1)
         {
@@ -39,10 +39,10 @@ public class EnemyPathing : MonoBehaviour
             //to make sure that the x-axis is always 0
             targetPosition.z = 0f;
 
-            var enemyMovement = waveConfig.GetEnemyMoveSpeed() * Time.deltaTime;
+            var collisionMovement = waveConfig.GetEnemyMoveSpeed() * Time.deltaTime;
 
             //Move Enemy from current position to target position, at enemy movement speed
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition, enemyMovement);
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, collisionMovement);
 
             //if enemy reach the last waypoint
             if (transform.position == targetPosition)
