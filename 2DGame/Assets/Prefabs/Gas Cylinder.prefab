@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -3184641085507157461}
   - component: {fileID: 4672655459654793162}
   - component: {fileID: 3619718670173959102}
+  - component: {fileID: -410174725428821331}
   m_Layer: 0
   m_Name: Gas Cylinder
   m_TagString: Untagged
@@ -153,3 +154,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-410174725428821331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6335851739379972289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d4b5425abd03c845a59b4473ec96e2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  enemyLaserPrefab: {fileID: 0}
+  enemyLaserSpeed: 0.3

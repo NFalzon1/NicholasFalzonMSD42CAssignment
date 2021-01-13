@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -3939488648747808967}
   - component: {fileID: 1146988628256196990}
   - component: {fileID: 1189043560498372900}
+  - component: {fileID: -1509479259775642854}
   m_Layer: 0
   m_Name: Bullet2
   m_TagString: Untagged
@@ -135,3 +136,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-1509479259775642854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2824988449748325982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d4b5425abd03c845a59b4473ec96e2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  enemyLaserPrefab: {fileID: 0}
+  enemyLaserSpeed: 0.3

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] float health = 100;
 
     [SerializeField] float shotCounter;
 
@@ -14,6 +15,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject enemyLaserPrefab;
 
     [SerializeField] float enemyLaserSpeed = 0.3f;
+
+
 
 
     // Start is called before the first frame update
@@ -46,4 +49,28 @@ public class Enemy : MonoBehaviour
 
         enemyLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -enemyLaserSpeed);
     }
+
+    private void OnTriggerEnter2D(Collider2D bullet)
+    {
+        DamageDealer DmgDeal = bullet.gameObject.GetComponent<DamageDealer>();
+
+        if (!DmgDeal)
+        {
+            return;
+        }
+
+        ProcessHit(DmgDeal);
+
+    }
+
+    private void ProcessHit(DamageDealer dmgDeal)
+    {
+        health -= dmgDeal.GetDamage();
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }

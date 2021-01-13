@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7233955079839770487, guid: 245fced63344562449cd1bf1c0cdccfb, type: 3}
+      propertyPath: health
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3314313214680253431, guid: 245fced63344562449cd1bf1c0cdccfb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -267,7 +271,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4369829447990504789, guid: 245fced63344562449cd1bf1c0cdccfb, type: 3}
   m_PrefabInstance: {fileID: 730506327}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1388196532
+--- !u!114 &1388196530
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -276,12 +280,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1388196529}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76e81228d840114448198325f94485e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e65c6cb86f6ecc428c8f7c437bb77bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  moveSpeed: 20
-  padding: 0.5
+  damage: 100
 --- !u!1 &1990995939
 GameObject:
   m_ObjectHideFlags: 0
