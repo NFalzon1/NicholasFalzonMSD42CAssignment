@@ -9,11 +9,23 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 0.7f;
 
+    [SerializeField] AudioClip playerHRSound;
+
+    //allows the variable to be set in the Inspector from 0 to 1
+    [SerializeField] [Range(0, 1)] float playerHRVolume = 0.5f;
+
+    [SerializeField] AudioClip playerBRSound;
+
+    //allows the variable to be set in the Inspector from 0 to 1
+    [SerializeField] [Range(0, 1)] float playerBRVolume = 0.5f;
+
+
     float xMin, xMax;
 
     // Start is called before the first frame update
     void Start()
     {
+        AudioSource.PlayClipAtPoint(playerBRSound, Camera.main.transform.position, playerBRVolume);
         SetUpMoveBoundaries(); 
     }
 
@@ -50,18 +62,17 @@ public class Player : MonoBehaviour
 
     }
 
-    //Damage Dealer part starts here
-
     private void OnTriggerEnter2D(Collider2D bullet)
     {
         DamageDealer DmgDeal = bullet.gameObject.GetComponent<DamageDealer>();
 
         if (!DmgDeal)
         {
+            
             return;
         }
-
         ProcessHit(DmgDeal);
+        AudioSource.PlayClipAtPoint(playerHRSound, Camera.main.transform.position, playerHRVolume);
 
     }
 
@@ -72,6 +83,9 @@ public class Player : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            FindObjectOfType<Level>().LoadGameOver();
         }
     }
+
+
 }

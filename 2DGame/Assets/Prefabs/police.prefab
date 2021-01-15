@@ -14,8 +14,7 @@ GameObject:
   - component: {fileID: 6381236150959684762}
   - component: {fileID: -8740024502692484971}
   - component: {fileID: 7426743085934176553}
-  - component: {fileID: -47252686059514631}
-  - component: {fileID: -2060887076343655642}
+  - component: {fileID: -1333923322087147667}
   m_Layer: 0
   m_Name: police
   m_TagString: Untagged
@@ -155,7 +154,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-47252686059514631
+--- !u!114 &-1333923322087147667
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,30 +163,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4560405931641636791}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d4b5425abd03c845a59b4473ec96e2e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4556251a2b09aa14d94218c1aadab50f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  shotCounter: 0
-  minTimeBetweenShots: 0.2
-  maxTimeBetweenShots: 1
-  enemyLaserPrefab: {fileID: 2824988449748325982, guid: ecb002f6961158f4d95b0f77932dc445, type: 3}
-  enemyLaserSpeed: 12
---- !u!114 &-2060887076343655642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4560405931641636791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d4b5425abd03c845a59b4473ec96e2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
+  health: 4
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
-  enemyLaserPrefab: {fileID: 0}
-  enemyLaserSpeed: 0.3

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 525586379552966612}
   - component: {fileID: -7233955079839770487}
   - component: {fileID: 2052358330236655984}
-  - component: {fileID: -2856513940784454972}
+  - component: {fileID: 848729077270963911}
   m_Layer: 8
   m_Name: Player Car Sprite
   m_TagString: Untagged
@@ -168,6 +168,10 @@ MonoBehaviour:
   health: 50
   moveSpeed: 10
   padding: 0.7
+  playerHRSound: {fileID: 8300000, guid: 0fb1949d0eb8b254eb55eae5171ee9e3, type: 3}
+  playerHRVolume: 0.472
+  playerBRSound: {fileID: 8300000, guid: a4912590aba025141ad5947524ed94f0, type: 3}
+  playerBRVolume: 0.5
 --- !u!114 &2052358330236655984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
---- !u!114 &-2856513940784454972
+--- !u!114 &848729077270963911
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,12 +194,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4369829447990504789}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d4b5425abd03c845a59b4473ec96e2e, type: 3}
+  m_Script: {fileID: 11500000, guid: c5ecac371feb93447b15df14f893b720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  shotCounter: 0
-  minTimeBetweenShots: 0.2
-  maxTimeBetweenShots: 3
-  enemyLaserPrefab: {fileID: 0}
-  enemyLaserSpeed: 0.3

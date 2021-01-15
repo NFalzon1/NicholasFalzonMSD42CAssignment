@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -3480577030306674616}
   - component: {fileID: -1776877502151447394}
   - component: {fileID: -802414907202263969}
-  - component: {fileID: -7717211476188111938}
+  - component: {fileID: 6157506049070875051}
   m_Layer: 0
   m_Name: Construction
   m_TagString: Untagged
@@ -154,7 +154,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-7717211476188111938
+--- !u!114 &6157506049070875051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,12 +163,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1470048599736356245}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d4b5425abd03c845a59b4473ec96e2e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4556251a2b09aa14d94218c1aadab50f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  shotCounter: 0
+  health: 1
+  shotCounter: 1
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
-  enemyLaserPrefab: {fileID: 0}
-  enemyLaserSpeed: 0.3
