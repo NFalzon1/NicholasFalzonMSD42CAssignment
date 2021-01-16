@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -916309123466182839}
   - component: {fileID: 5361105338854468373}
   - component: {fileID: -4392957485733555111}
-  - component: {fileID: -864733986905281665}
+  - component: {fileID: -3622119897153700031}
   m_Layer: 11
   m_Name: EnemyLaser
   m_TagString: Untagged
@@ -136,7 +136,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-864733986905281665
+--- !u!114 &-3622119897153700031
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,12 +145,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3325153849355851513}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d4b5425abd03c845a59b4473ec96e2e, type: 3}
+  m_Script: {fileID: 11500000, guid: ea9c806766be8944fa0d65aca6f10ac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 1
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
-  enemyLaserPrefab: {fileID: 0}
-  enemyLaserSpeed: 0.3
+  deathVFX: {fileID: 5160522800389134349, guid: 4a21346bc7a4b3142ba495cddd0ef9c8, type: 3}
+  explosionDuration: 1

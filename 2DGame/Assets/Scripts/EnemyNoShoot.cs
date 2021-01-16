@@ -12,7 +12,9 @@ public class EnemyNoShoot : MonoBehaviour
 
     [SerializeField] float maxTimeBetweenShots = 3f;
 
+    [SerializeField] GameObject deathVFX;
 
+    [SerializeField] float explosionDuration = 1f;
 
 
 
@@ -50,8 +52,15 @@ public class EnemyNoShoot : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+        Destroy(explosion, explosionDuration);
     }
 
 }

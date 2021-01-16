@@ -117,12 +117,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d4b5425abd03c845a59b4473ec96e2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 3
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
   enemyLaserPrefab: {fileID: 3325153849355851513, guid: 8c72b97e56a94cd46887997df6f3c162, type: 3}
   enemyLaserSpeed: 9
+  deathVFX: {fileID: 5160522800389134349, guid: 4a21346bc7a4b3142ba495cddd0ef9c8, type: 3}
+  explosionDuration: 1
 --- !u!60 &-8782256524279580894
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -369,3 +371,5 @@ MonoBehaviour:
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
+  deathVFX: {fileID: 5160522800389134349, guid: 4a21346bc7a4b3142ba495cddd0ef9c8, type: 3}
+  explosionDuration: 1

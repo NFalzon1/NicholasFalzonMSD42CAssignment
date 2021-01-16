@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] AudioClip playerBRSound;
 
     //allows the variable to be set in the Inspector from 0 to 1
-    [SerializeField] [Range(0, 1)] float playerBRVolume = 0.5f;
+    [SerializeField] [Range(0, 1)] float playerBRVolume = 0.1f;
 
 
     float xMin, xMax;

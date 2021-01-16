@@ -171,7 +171,7 @@ MonoBehaviour:
   playerHRSound: {fileID: 8300000, guid: 0fb1949d0eb8b254eb55eae5171ee9e3, type: 3}
   playerHRVolume: 0.472
   playerBRSound: {fileID: 8300000, guid: a4912590aba025141ad5947524ed94f0, type: 3}
-  playerBRVolume: 0.5
+  playerBRVolume: 0.001
 --- !u!114 &2052358330236655984
 MonoBehaviour:
   m_ObjectHideFlags: 0

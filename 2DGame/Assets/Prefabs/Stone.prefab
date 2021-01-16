@@ -170,3 +170,5 @@ MonoBehaviour:
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
+  deathVFX: {fileID: 5160522800389134349, guid: 4a21346bc7a4b3142ba495cddd0ef9c8, type: 3}
+  explosionDuration: 1
