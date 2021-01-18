@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyNoShoot : MonoBehaviour
 {
-    [SerializeField] float health = 100;
+    [SerializeField] float health = 100f;
 
     [SerializeField] float shotCounter;
 
@@ -17,6 +17,14 @@ public class EnemyNoShoot : MonoBehaviour
     [SerializeField] float explosionDuration = 1f;
 
 
+    [SerializeField] int scoreValue = 5;
+
+    private void OnTriggerEnter2D(Collider2D otherObject)
+    {
+        DamageDealer dmgDealer = otherObject.gameObject.GetComponent<DamageDealer>();
+
+        ProcessHit(dmgDealer);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -25,26 +33,6 @@ public class EnemyNoShoot : MonoBehaviour
         shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
     }
 
-    // Update is called once per frame
-    private void Update()
-    {
-       
-    }
-
-    
-    
-    private void OnTriggerEnter2D(Collider2D bullet)
-    {
-        DamageDealer DmgDeal = bullet.gameObject.GetComponent<DamageDealer>();
-
-        if (!DmgDeal)
-        {
-            return;
-        }
-
-        ProcessHit(DmgDeal);
-
-    }
 
     private void ProcessHit(DamageDealer dmgDeal)
     {
@@ -59,8 +47,13 @@ public class EnemyNoShoot : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
+
         GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+
         Destroy(explosion, explosionDuration);
+
+        /*FindObjectOfType<GameSession>().AddToScore(scoreValue);*/
+
     }
 
 }

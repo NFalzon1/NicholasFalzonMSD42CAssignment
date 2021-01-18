@@ -5,8 +5,10 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    [SerializeField] float health = 100f;
+    [SerializeField] int health = 50;
+
     [SerializeField] float moveSpeed = 10f;
+
     [SerializeField] float padding = 0.7f;
 
     [SerializeField] AudioClip playerHRSound;
@@ -14,10 +16,10 @@ public class Player : MonoBehaviour
     //allows the variable to be set in the Inspector from 0 to 1
     [SerializeField] [Range(0, 1)] float playerHRVolume = 0.5f;
 
-    [SerializeField] AudioClip playerBRSound;
+    [SerializeField] GameObject deathVFX;
 
-    //allows the variable to be set in the Inspector from 0 to 1
-    [SerializeField] [Range(0, 1)] float playerBRVolume = 0.1f;
+    [SerializeField] float explosionDuration = 1f;
+
 
 
     float xMin, xMax;
@@ -25,9 +27,9 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AudioSource.PlayClipAtPoint(playerBRSound, Camera.main.transform.position, playerBRVolume);
         SetUpMoveBoundaries(); 
     }
+
 
     // Update is called once per frame
     void Update()
@@ -72,6 +74,7 @@ public class Player : MonoBehaviour
             return;
         }
         ProcessHit(DmgDeal);
+        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
         AudioSource.PlayClipAtPoint(playerHRSound, Camera.main.transform.position, playerHRVolume);
 
     }
@@ -82,9 +85,16 @@ public class Player : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
             FindObjectOfType<Level>().LoadGameOver();
+            Destroy(gameObject);
+            AudioSource.PlayClipAtPoint(playerHRSound, Camera.main.transform.position, playerHRVolume);
+            
         }
+    }
+
+    public int GetHealth()
+    {
+        return health;
     }
 
 

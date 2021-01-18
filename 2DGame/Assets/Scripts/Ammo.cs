@@ -17,8 +17,6 @@ public class Ammo : MonoBehaviour
     [SerializeField] float explosionDuration = 1f;
 
 
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +40,7 @@ public class Ammo : MonoBehaviour
         }
     }
 
-
+    
 
     private void OnTriggerEnter2D(Collider2D bullet)
     {
