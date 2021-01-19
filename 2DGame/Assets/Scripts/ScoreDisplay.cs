@@ -23,4 +23,6 @@ public class ScoreDisplay : MonoBehaviour
     {
         scoreText.text = gameSession.GetScore().ToString();
     }
+
+
 }

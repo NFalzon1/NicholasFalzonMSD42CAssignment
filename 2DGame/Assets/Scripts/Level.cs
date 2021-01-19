@@ -5,7 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
 {
-    [SerializeField] float delayInSeconds = 2f;
+    [SerializeField] float delayInSeconds = 0.5f;
+
+    int score = 0;
+
+    public static void LoadWinner()
+    {
+        SceneManager.LoadScene("WinnerScene");
+    }
 
     IEnumerator WaitAndLoad()
     {
@@ -23,6 +30,8 @@ public class Level : MonoBehaviour
     {
         //loads the scene with the name SampleScene
         SceneManager.LoadScene("SampleScene");
+
+        FindObjectOfType<GameSession>().ResetGame();
     }
 
     public void LoadGameOver()
@@ -35,4 +44,9 @@ public class Level : MonoBehaviour
         
         Application.Quit();
     }
+
+    
+
+
+    
 }

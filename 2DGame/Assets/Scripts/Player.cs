@@ -88,7 +88,6 @@ public class Player : MonoBehaviour
             FindObjectOfType<Level>().LoadGameOver();
             Destroy(gameObject);
             AudioSource.PlayClipAtPoint(playerHRSound, Camera.main.transform.position, playerHRVolume);
-            
         }
     }
 

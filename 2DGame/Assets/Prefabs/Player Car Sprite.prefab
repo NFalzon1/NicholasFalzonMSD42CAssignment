@@ -169,9 +169,7 @@ MonoBehaviour:
   moveSpeed: 10
   padding: 0.7
   playerHRSound: {fileID: 8300000, guid: 0fb1949d0eb8b254eb55eae5171ee9e3, type: 3}
-  playerHRVolume: 0.472
-  playerDeathSound: {fileID: 8300000, guid: 0fb1949d0eb8b254eb55eae5171ee9e3, type: 3}
-  playerDSSound: 0.472
+  playerHRVolume: 0.5
   deathVFX: {fileID: 5160522800389134349, guid: 4a21346bc7a4b3142ba495cddd0ef9c8, type: 3}
   explosionDuration: 1
 --- !u!114 &2052358330236655984
